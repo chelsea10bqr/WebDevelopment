@@ -1,0 +1,146 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.deck {
+	width: 85%;
+	background: lightblue;
+	padding: 1rem;
+	border-radius: 4px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 0 3em;
+}
+
+.deck .card {
+	margin: 0.2rem 0.2rem;
+	background: black;
+	font-size: 0;
+	color: deepskyblue;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.deck .card.show {
+	font-size: 100px;
+}
+
+.deck .card.match {
+	background: greenyellow;
+	font-size: 100px;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+
+}
+
+.deck .card.unmatched {
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+}
+
+.deck .card.disabled {
+	pointer-events: none;
+	opacity: 0.9;
+}
+
+.score-panel {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+
+
+/*
+ * Styles for congratulations modal
+ */
+
+
+.window {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.window:target {
+	visibility: visible;
+	opacity: 1;
+}
+  
+.popup {
+	margin: 70px auto;
+	padding: 20px;
+	background: white;
+}
+
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	color: #333;
+}
+
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+
+@media (max-width: 320px) {
+	.deck {
+		width: 85%;
+	}
+
+	.deck .card {
+		height: 4.7rem;
+		width: 4.7rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.score {
+		font-size: 22px;
+	}
+
+	.deck {
+		width: 660px;
+		height: 680px;
+	}
+
+	.deck .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.popup {
+		width: 60%;
+	}
+}

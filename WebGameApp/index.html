@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Michael(Quanrui) Bai qb2">
+    <title>HW3 Game</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<table class = "main">
+    <tr>
+        <td>
+            <h1>Memory Card Game</h1>
+            In this game, you will be given 4x4 grid, and you need to click pairs which are the same fruit, based on the memory .<br/><br/>
+            The score will be the moves you spend on this puzzle, less is better<br/><br/>
+            <b>The game will shuffle the card periodically between 20-40s, if you cannot finish game in time, you failed,<br/>
+                and you need to do again with accumulative moves.</b>
+        </td>
+        <td>
+            The least moves(best score): <span id="best">0</span> <br/><br/>
+            <div class="score">
+
+                <section class="score-panel">
+                    Your Moves(Score): <span class="moves">0</span>
+                    <div class="timer">
+                    </div>
+
+                    <button id="restart" onclick=startGame()>restart<button/>
+
+                </section>
+
+                <ul class="deck" id="card-deck">
+                    <li class="card" type="apple">
+                        <i class="fa fa-apple"></i>
+                    </li>
+                    <li class="card" type="lemon">
+                        <i class="fa fa-lemon-o"></i>
+                    </li>
+                    <li class="card" type="apple">
+                        <i class="fa fa-apple"></i>
+                    </li>
+                    <li class="card" type="ship" >
+                        <i class="fa fa-ship"></i>
+                    </li>
+                    <li class="card" type="apple">
+                        <i class="fa fa-apple"></i>
+                    </li>
+                    <li class="card" type="ship" >
+                        <i class="fa fa-ship"></i>
+                    </li>
+                    <li class="card" type="lemon">
+                        <i class="fa fa-lemon-o"></i>
+                    </li>
+                    <li class="card" type="shield">
+                        <i class="fa fa-shield"></i>
+                    </li>
+                    <li class="card" type="shield">
+                        <i class="fa fa-shield"></i>
+                    </li>
+                    <li class="card" type="lemon">
+                        <i class="fa fa-lemon-o"></i>
+                    </li>
+                    <li class="card" type="apple">
+                        <i class="fa fa-apple"></i>
+                    </li>
+                    <li class="card" type="lemon">
+                        <i class="fa fa-lemon-o"></i>
+                    </li>
+                    <li class="card" type="shield">
+                        <i class="fa fa-shield"></i>
+                    </li>
+                    <li class="card" type="ship" >
+                        <i class="fa fa-ship"></i>
+                    </li>
+                    <li class="card" type="ship" >
+                        <i class="fa fa-ship"></i>
+                    </li>
+                    <li class="card" type="shield">
+                        <i class="fa fa-shield"></i>
+                    </li>
+                </ul>
+        </td>
+
+    </tr>
+</table>
+
+        <div id="popup1" class="window">
+            <div class="popup">
+                <h2>Congratulations </h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    Congratulations you're a winner
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                </div>
+                <button id="restart"onclick="playAgain()">
+                    Play again
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

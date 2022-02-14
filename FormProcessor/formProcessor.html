@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael(Quanrui) Bai qb2"> 
+	<title>HW1 formProcessor</title>
+	<!-- design the table style -->
+	<style>                   
+            .TABLE {
+                width: 700px;
+                height: 800px;
+                margin: auto;
+                border: 1px solid black;
+            }
+            .TABLE th {
+                border: 1px solid black;
+            }
+        </style>
+    	
+</head>
+
+<body>
+	<table class="TABLE" id="processor">   
+		
+	</table>
+	<script>
+		window.onload = function(){
+			var data=location.search.substring(1).split("&");     //search the parameter split by &
+			for(row in data){
+				var cur=data[row].split("=");               //divide the parameter into two parts by "="
+				if(cur[0]=="Email"){                        //use decodeURIComponent to get @
+					document.getElementById("processor").innerHTML += "<tr><th>" + cur[0] + "</th><th>" + decodeURIComponent(cur[1]) + "</th></tr>";
+				}
+				else if(cur[0]=="timestamp"){
+					var date = new Date(parseInt(cur[1]));            //use parseInt to convert string to integer to get timestamp readable
+					document.getElementById("processor").innerHTML += "<tr><th>" + cur[0] + "</th><th>" + date + "</th></tr>";		
+				}
+				else if(cur[0]=="password"||cur[0]=="confirm"){           //convert password into "*"
+					var str ="";
+					for (let i = 0; i < cur[1].length; i++) {
+ 						 str += "*";
+					}
+					document.getElementById("processor").innerHTML += "<tr><th>" + cur[0] + "</th><th>" + str + "</th></tr>";
+				}
+				else if(cur[0]=="display"&&cur[1] ==""){               //if displayname is empty, show N/A in the form
+					var empty ="N/A"
+					document.getElementById("processor").innerHTML += "<tr><th>" + cur[0] + "</th><th>" + empty + "</th></tr>";
+				}
+				else{
+					document.getElementById("processor").innerHTML += "<tr><th>" + cur[0] + "</th><th>" + cur[1] + "</th></tr>";
+				}
+			}
+		}
+	</script>
+</body>
+</html>

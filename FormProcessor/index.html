@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael(Quanrui) Bai qb2">
+	<title>HW1 index</title>
+</head>
+
+
+<body onload="getTimeStamp()">
+
+<h1>Sign-Up for your latest offer!  </h1>
+<form name="regform" method="GET" action="formProcessor.html">
+	<p><b>Account Name*:  </b><input type="text" name="name" placeholder="Account Name" required></p>
+    	<p><b>Display Name: </b><input type="text" name="display" placeholder="Display Name"></p>
+    	<p><b>Email Address*:  </b><input type="email" name="Email" placeholder="Your primary email address" required></p>
+    	<p><b>Phone Number*:  </b><input type="tel" name="Phone" placeholder=" ex.111-222-3333" pattern='\d\d\d-\d\d\d-\d\d\d\d' required></p>
+    	<p><b>Date of Birth*: </b><input type="date" name="DOB" placeholder="MM/DD/YYYY" required></p>
+    	<p><b>Zipcode*: </b><input type="text" name="Zipcode" placeholder="5-digit zipcode" pattern='\d{5}' required></p>
+    	<p><b>Password*: </b><input type="password" name="password" placeholder="Your Password" required></p>
+    	<p><b>Passowrd Confirmation*: </b><input type="password" name="confirm" placeholder="make sure matched password" required></p>
+    	
+	<input type="hidden" id="timestamp" name="timestamp">
+	<input type="submit" value="Register" onclick="return validation(document.regform)"> <input type="reset" value="Clear">
+</form>
+<script>
+
+function getTimeStamp(){
+			document.getElementById("timestamp").value = new Date().getTime();
+	}
+
+function validation(form){
+	var flag = true;
+	var valaccount=/^([a-zA-Z]{1})([a-zA-Z0-9]{1})+$/;
+	if(form.name.value.match(valaccount)){  	     
+        }
+	else{
+       	 	flag = false;
+         	alert("Please fill out this field. Account name can only be upper or lower case letters and numbers, but may not start with a number.");
+        }
+   	if(form.password.value==form.confirm.value){	
+        }
+	else{
+            flag = false;
+            alert("Two passwords are not the same!");
+        }
+   var dob = form.DOB.value;           //get the input date
+   var yr = dob.substring(0,4);
+   var mon = dob.substring(5,7);
+   var day = dob.substring(8,10);
+   var now = new Date();		//get the current date
+   var nowyr = now.getFullYear();
+   var nowmon = now.getMonth()+1;
+   var nowday = now.getDate();
+	if ((nowyr-yr)<18){			//if smaller than 18, alert directly.
+   		flag = false;
+   		alert("You must be 18 or older!");
+	}else if ((nowyr-yr)==18){			//if equals to 18, compare the month first.
+   		if((nowmon-mon)<0){
+        		flag = false;
+       			alert("You must be 18 or older!");          
+   		}else if((nowmon-mon)==0){		  //if months are equal, compare the day.
+   				if((nowday-day)<0){
+        				flag = false;
+        				alert("You must be 18 or older!");
+				}
+       		}
+     	}
+     return flag;  
+}
+
+</script>
+</body>
+</html>
