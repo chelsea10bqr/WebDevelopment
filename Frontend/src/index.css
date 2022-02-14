@@ -1,0 +1,94 @@
+body{
+  background-color:lightblue;
+}
+
+.inputmsg{
+  width:50%;
+  font-size: 16px;
+  font-weight:bold;
+
+}
+.inputmsg2{
+  width:50%;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+h1{
+  text-align: center;
+  font-weight:bold;
+  font-size: 3em;
+}
+h2{
+  text-align: center;
+  font-weight:bold;
+  font-size: 2em;
+}
+h3{
+  text-align: center;
+  font-weight:bold;
+  font-size: 1em;
+}
+.note{
+  text-align: center;
+  font-weight:bold;
+  font-size: 1.5em;
+}
+img{
+  width: 200px;
+  height:200px;
+}
+.main {
+  text-align: center;
+  background-color: burlywood;
+  width:90%;
+  height:80%;
+  margin:20px auto;
+}
+
+.maintable {
+  vertical-align:top;
+}
+
+.loginpage {
+  width:90%;
+  border: 0.5em solid;
+  border-color: lightgreen;
+  border-radius: 2em 2em 2em 2em;
+  padding: 3em 0em 3em 0em;
+  background-color: pink;
+  font-size: 1.2em;
+  margin: 20px auto;
+}
+
+.mainpage {
+  width:95%;
+  border: 0.5em solid;
+  border-color: lightgreen;
+  border-radius: 2em 2em 2em 2em;
+  padding: 3em 0em 3em 0em;
+  background-color:pink;
+  font-size: 1.2em;
+  margin: 20px auto;
+}
+
+img{
+  width: 200px;
+  height:200px;
+}
+
+.alertmsg{
+  font-size: 1.0em;
+  font-weight:bold;
+  color: red;
+  margin: 20px auto;
+}
+.btn{
+  background: pink;
+  border-radius: 0.5em;
+  font-size: 20px;
+}
+
+#link{
+  text-align: center;
+}
