@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Michael(Quanrui) Bai qb2"> 
+	<title>HW2 Profilepage</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<h1>Profile Page</h1>
+<div id="gomain">
+        <a href="main.html"><input type="button" value="Back to User's Profile" id="mainpage"></a><br/>
+</div>
+
+<body onload="loadpass('test')">
+  <br/>
+
+  <div id="unchanged">
+    User Name: Michael Bai <br/>
+    Date of Birth: 1900-7-10 <br/>
+  </div>
+<div id="major">
+  <div class="change">
+  Display Name: <input type = "text" id = "name" placeholder = "your display name" > 
+  <span id = "holdname">chelsea10bqr</span>
+  <br/>
+  <span id = "alertname"></span>
+  <br/><br/>
+  Email Address: <input type = "email" id = "email" placeholder = "123@123.com" >
+  <span id = "holdemail">michaelbai.edu@outlook.com</span>
+  <br/>
+  <span id = "alertemail"></span>
+  <br/><br/>
+  Phone Number: <input type = "tel" id = "tel" placeholder = "123-456-7890"  >
+  <span id = "holdtel">713-788-5360</span>
+  <br/>
+  <span id = "alerttel"></span>
+  <br/><br/>
+  Zipcode: <input type = "text" id = "zip" placeholder = "5-digit zipcode" >
+  <span id = "holdzip">77025</span>
+  <br/>
+  <span id = "alertzip"></span>
+  <br/><br/>
+  Password: <input type = "password" id ="pass" placeholder = "Your password">
+  <span id = "holdpass"></span>
+  <br/>
+  <span id = "alertpass"></span>
+  <br/><br/>
+  Password Confirmation: <input type = "password" id = "confirm" placeholder = "Password Confirmation" >
+  <span id = "holdpassconfirm"></span>
+  <br/><br/>
+  <span id = "alert"></span>
+  <input type="button" id= "sub" value= "submit" onclick="validate()")>
+    </div>
+</div>
+  
+  
+</body>
+ <script type="text/javascript" src="profile.js"></script>
+</html>

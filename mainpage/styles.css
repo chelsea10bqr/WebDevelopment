@@ -1,0 +1,99 @@
+body{
+  background-color: lightblue;
+}
+
+h1 {
+  color: Black;
+  text-align: center;
+  font-size: 40px;
+}
+
+.TABLE {
+  padding-top: 100px;
+  padding-right: 400px;
+  padding-bottom: 100px;
+  padding-left: 400px;
+}
+
+.picture {
+  background-color:pink;
+  width:50%;
+	border: 0.5em solid;
+	border-color: lightgreen;
+	border-radius: 2em 2em 2em 2em;
+	padding: 3em 0em 3em 0em;
+	font-size: 1.2em;
+	font-family: Helvectica;
+	margin: 20px auto;
+  text-align: center;
+  picture-align: center;
+}
+
+.text {
+  background-color:lightgreen;
+  width:50%;
+	border: 0.5em solid;
+	border-color: pink;
+	border-radius: 2em 2em 2em 2em;
+	padding: 3em 0em 3em 0em;
+	font-size: 1.2em;
+	font-family: Helvectica;
+	margin: 20px auto;
+}
+
+.change {
+  padding: 3em 3em 3em 3em;
+  background-color: pink;
+  font-family: Helvectica;
+  border: 0.5em solid;
+  border-color: lightgreen;
+  border-radius: 3em;
+  font-size: 1.1em;
+  margin: 25px;
+  text-align: center;
+  width: 90%;
+}
+
+#unchanged {
+ background-color: white;
+ border: 0.5em solid;
+ border-radius: 0.5em;
+ border-color: lightgreen;
+ font-family: Helvectica;
+ text-align: center;
+ width: 15%;
+ height: 80%;
+}
+
+#major {
+  padding-right: 400px;
+  padding-bottom: 100px;
+  padding-left: 400px;
+}
+
+#holdtel,#holdname,#holdzip,#holdemail,#holdpass,#holdpassconfirm {
+  font-size: 1.5em;
+  color: rgb(0,128,255);
+}
+
+#alert,#alertzip,#alertpass,#alerttel,#alertname,#alertemail{
+  font-size: 1em;
+  color: red;
+}
+
+#profile,#sub,#start1,#start2,#start3,#mainpage{
+	background: pink;
+	border-radius: 0.5em;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+#gomain,#goprofile{
+  text-align: center;
+}
+
+img{
+	width: 400px;
+	height: 400px;
+}
+
